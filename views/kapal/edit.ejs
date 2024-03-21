@@ -11,19 +11,37 @@
 
 <body>
     <div class="container">
-        <h1 class="text-center mb-5">Data Keahlian</h1>
+        <h1 class="text-center mb-5">Data kapal</h1>
         <form action="/kapal/update/<%= id %>" method="POST">
             <div class="mb-3">
-                <label for="nama" class="form-label">Nama Keahlian</label>
-                <input type="text" class="form-control" name="nama_keahlian" value="<%= nama_keahlian %>" required>
+                <label for="nama" class="form-label">Nama kapal</label>
+                <input type="text" class="form-control" name="nama_kapal" value="<%= nama_kapal %>" required>
             </div>
             
             <div class="mb-3">
-                <label for="nama" class="form-label">Nama Mahasiswa</label>
-                <select class="form-select" aria-label="Pilih Tingkat Keahlian" name="id_mahasiswa" value='' required>
-                    <option selected>Data Mahasiswa</option>
-                    <% for(var i=0; i < data.length; i++){ %>
-                        <option value="<%= data[i].id_mahasiswa %>"><%= data[i].nama_depan %></option>
+                <label for="nama" class="form-label">Nama DPI</label>
+                <select class="form-select" aria-label="Pilih Tingkat Keahlian" name="id_dpi" required>
+                    <option selected>Data DPI</option>
+                    <% for(var i=0; i < data_dpi.length; i++){ %>
+                        <option value="<%= data_dpi[i].id_dpi %>"><%= data_dpi[i].nama_dpi %></option>
+                    <% } %>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama Pemilik</label>
+                <select class="form-select" aria-label="Pilih Tingkat Keahlian" name="id_pemilik" required>
+                    <option selected>Data DPI</option>
+                    <% for(var i=0; i < data_pemilik.length; i++){ %>
+                        <option value="<%= data_pemilik[i].id_pemilik %>"><%= data_pemilik[i].nama_pemilik %></option>
+                    <% } %>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama DPI</label>
+                <select class="form-select" aria-label="Pilih Tingkat Keahlian" name="id_alat_tangkap" required>
+                    <option selected>Data DPI</option>
+                    <% for(var i=0; i < data_alat.length; i++){ %>
+                        <option value="<%= data_alat[i].id_alat_tangkap %>"><%= data_alat[i].nama_alat_tangkap %></option>
                     <% } %>
                 </select>
             </div>
